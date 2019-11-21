@@ -1,0 +1,182 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace{-5pt}\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\skillsListBegin}{\begin{itemize}\setlength\itemsep{-2pt}}
+\newcommand{\skillsListEnd}{\end{itemize}}
+
+\newcommand{\sublitem}{\vspace{-4pt}\item}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Konstantinos Pelelis} & Email : \href{mailto:kpelelis@gmail.com}{kpelelis@gmail.com}\\
+  & Mobile : +30-698-160-30-98 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Technical University of Athens}{Athens, Greece}
+      {Master of Science in Electrical and Computer Engineering;  GPA: 7.8/10}{Oct. 2010 -- 2017}
+  \resumeSubHeadingListEnd
+
+% --------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+  \skillsListBegin
+     \item{
+       \textbf{Languages}{: Javascript, C/C++, Python, Java, Ruby}
+       \hfill
+      }
+      \item{
+        \textbf{Operating Systems}{: Linux, Windows}
+        \hfill
+      }
+    \skillsListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Skroutz S.A.}{Athens, Greece}
+      {Software Engineer}{Oct 2018 - Present}
+      \break
+      Architecture team (Oct 2018 - Feb 2019)
+      \resumeItemListStart
+        \sublitem{Implemented a distributed Server Side Rendering (SSR) service}
+      \resumeItemListEnd
+      Product Development (Feb 2019 - Present)
+      \resumeItemListStart
+        \sublitem{Development of new features in a new food delivery service software}
+        \sublitem{Development of mobile applications for the food delivery service in React Native}
+        \sublitem{Setup of a React Native focused, continuous integration system based on Jenkins}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Beat}{Athens, Greece}
+      {Software Engineer}{Mar 2018 - Oct 2018}
+      \break
+      Internal tools team. Worked on various projects including:
+      \resumeItemListStart
+        \sublitem{Internationalization and translation syncing service}
+        \sublitem{Dynamic form generator (client, server).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Oculus}{London, United Kingdom}
+      {Software Engineer Intern}{Sep 2017 - Dec 2017}
+      \break
+      Worked on Oculus Rooms team. Responsible for the VR tabletop games of the application implemented in
+      Unity. Utilized ReactVR to enhance gaming experience.
+      \resumeItemListStart
+        \sublitem{Implemented a game in ReactVR/Redux stack played by thousands of users}
+        \sublitem{Designed and implemented a platform for third-party game developers}
+        \sublitem{General performance fixes for mobile device optimization}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Greek Research and Technology Network}{Athens, Greece}
+      {Software Engineer}{Oct 2016 - Sep 2017}
+      \break
+      Worked on python-based (Django) Infrastructure as a Service platform that utilizes Google’s Ganeti (a cluster-based virtualization management software) 
+      and exposes part of the OpenStack API. Responsible both for backend as well as fronted development including planning, implementation and testing.
+      \resumeItemListStart
+        \sublitem{Implemented a feature to rescue Virtual Machines in corrupted state}
+        \sublitem{Significantly improved platform’s compatibility with the OpenStack platform}
+        \sublitem{Redesigned and re-implemented part of the exposed API}
+        \sublitem{Implemented new features on the User Interface of the platform}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+% -------- PROJECTS ------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Chat Moderator Bot}{\href{https://github.com/kpelelis/Plbot}{Github repository}}
+      {Nodejs}{Jan 2016 - Dec 2017}
+      \break
+      Main features include
+      \resumeItemListStart
+        \sublitem{Provider agnostic (tested with Slack and Discord)}
+        \sublitem{Asynchronous message processing}
+        \sublitem{Runtime plugin system}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+     \item{
+       \textbf{Open-Source contributions}{:
+          \href{https://github.com/airbnb/hypernova}{Hypernova},
+          \href{https://github.com/FormidableLabs/react-native-app-auth}{React Native App-Auth},
+          \href{https://github.com/rails/webpacker}{Webpacker},
+          \href{https://github.com/ggiamarchi/vagrant-openstack-provider}{Vagrant OpenStack provider}
+        }
+       \hfill
+      }
+    \resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
